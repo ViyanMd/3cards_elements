@@ -1,13 +1,20 @@
 :root {
   font-size: 62.5%;
+}
+
+* {
   box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 8rem 2.5rem;
 }
 
 .container {
   margin: 0 auto;
-  margin-top: 20%;
-  margin-bottom: 20%;
-  max-width: 90%;
+  width: 100%;
+  max-width: 32rem;
   color: #f2f2f2;
   font-family: "Lexend Deca";
   font-size: 1.5rem;
@@ -20,6 +27,12 @@
   overflow: hidden;
 }
 
+.container > * {
+  padding: 4.75rem;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
 .container h1 {
   font-family: "Big Shoulders Display";
   font-size: 4rem;
@@ -29,12 +42,10 @@
 
 .sedan {
   background-color: #e28625;
-  padding: 6rem;
 }
 
 .suv {
   background-color: #006971;
-  padding: 6rem;
   border: 1px solid #006971;
   border-radius: 8px 8px 0 0;
   margin-top: -0.8rem;
@@ -42,7 +53,6 @@
 
 .lux {
   background-color: #004140;
-  padding: 6rem;
   margin-top: -0.8rem;
   border: 1px solid #004140;
   border-radius: 8px;
@@ -56,54 +66,52 @@
   padding: 1.1rem 4rem;
   margin-top: 1rem;
   background-color: #f2f2f2;
+  font-weight: bold;
 }
 
 .sedan .action-info {
   color: #e28625;
-  font-weight: bold;
 }
 
 .suv .action-info {
   color: #006971;
-  font-weight: bold;
 }
 
 .lux .action-info {
   color: #004140;
-  font-weight: bold;
 }
 
 .sedan .action-info:hover {
-  color: #f2f2f2;
   background-color: #e28625;
-  font-weight: bold;
-  transition: 200ms;
 }
 
 .suv .action-info:hover {
-  color: #f2f2f2;
   background-color: #006971;
-  font-weight: bold;
-  transition: 200ms;
 }
 
 .lux .action-info:hover {
-  color: #f2f2f2;
   background-color: #004140;
+}
+
+.sedan .action-info:hover,
+.suv .action-info:hover,
+.lux .action-info:hover {
+  color: #f2f2f2;
   font-weight: bold;
   transition: 200ms;
 }
 
-@media screen and (min-width: 1317px) {
-  :root {
-    max-width: 1440px;
-    margin: 0 auto;
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .container {
-    margin: 0 auto;
     flex-direction: row;
-    margin-top: 10%;
-    max-width: 67%;
+    max-width: 92rem;
+    max-height: 50rem;
   }
 
   .action-info {
